@@ -1,7 +1,5 @@
 (ns euler.p6 (:use [euler common]))
 
-(defn square [n] (* n n))
-
 (defn solve [n]
   (let [xs (range 1 (inc n))
         sum-of-squares (sum (map square xs))

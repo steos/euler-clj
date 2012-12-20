@@ -22,4 +22,8 @@
 (defn now [] (System/nanoTime))
 
 
+(defn square [n] (* n n))
 
+(defn ctoi [char] (- (int char) 48))
+
+(defn factorial [n] (apply * (range 1N (inc n))))

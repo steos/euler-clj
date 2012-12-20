@@ -1,15 +1,9 @@
-(ns euler.p2)
-
-(defn fib
-  ([]
-     (fib 1 2))
-  ([a b]
-     (cons a (lazy-seq (fib b (+ b a))))))
+(ns euler.p2 (:use [euler common]))
 
 (defn solve [n]
-  (reduce +
-          (filter even?
-                  (take-while #(< % n)
-                              (fib)))))
+  (sum
+   (filter even?
+           (take-while #(< % n)
+                       (fibonacci-series)))))
 
 (def solve-for 4e6)

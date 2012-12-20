@@ -1,6 +1,4 @@
-(ns euler.p6)
-
-(defn sum [coll] (reduce + coll))
+(ns euler.p6 (:use [euler common]))
 
 (defn sum-of [f coll] (sum (map f coll)))
 

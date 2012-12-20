@@ -21,9 +21,12 @@
 
 (defn now [] (System/nanoTime))
 
-
 (defn square [n] (* n n))
 
 (defn ctoi [char] (- (int char) 48))
 
 (defn factorial [n] (apply * (range 1N (inc n))))
+
+(defn sum-digits [n] (sum (map ctoi (str n))))
+
+(defn power-of-2 [exp] (apply * (repeat exp 2N)))

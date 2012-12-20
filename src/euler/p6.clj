@@ -1,12 +1,10 @@
 (ns euler.p6 (:use [euler common]))
 
-(defn sum-of [f coll] (sum (map f coll)))
-
 (defn square [n] (* n n))
 
 (defn solve [n]
   (let [xs (range 1 (inc n))
-        sum-of-squares (sum-of square xs)
+        sum-of-squares (sum (map square xs))
         square-of-sum (square (sum xs))]
     (- square-of-sum sum-of-squares)))
 

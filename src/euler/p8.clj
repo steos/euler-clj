@@ -22,8 +22,9 @@
        "05886116467109405077541002256983155200055935729725"
        "71636269561882670428252483600823257530420752963450"))
 
+(defn ctoi [char] (- (int char) 48))
+(defn product [coll] (reduce * coll))
 (defn solve []
-  (apply max (map #(apply * %)
-       (partition 5 1
-                  (map #(Integer/parseInt (str %))
-                       (seq +num+))))))
+  (let [digits (map ctoi +num+)]
+    (reduce max (map product
+                     (partition 5 1 digits)))))

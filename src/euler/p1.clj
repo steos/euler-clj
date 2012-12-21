@@ -8,7 +8,8 @@
   (filter #(mult-of-any? % xs) (iterate inc 1)))
 
 (defn solve [n]
-  (sum (take-until n (mults-of-any 3 5))))
+  (sum (take-while (less-than? n)
+                   (mults-of-any 3 5))))
 
 (def test-with [10 23])
 (def solve-for 1000)

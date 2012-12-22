@@ -27,3 +27,6 @@
 (defn sum-digits [n] (sum (map ctoi (str n))))
 
 (defn power-of-2 [exp] (apply * (repeat exp 2N)))
+
+(defn palindrome? [s] (= s (clojure.string/reverse s)))
+

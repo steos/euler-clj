@@ -1,10 +1,9 @@
-(ns euler.p4)
+(ns euler.p4 (:use [euler common]))
 
-(defn palindrome? [n]
+(defn decimal-palindrome? [n]
   (if (< n 10)
     false
-    (let [s (Integer/toString n)]
-      (= s (clojure.string/reverse s)))))
+    (palindrome? (Integer/toString n))))
 
 (defn products [max]
   (let [nums (range (dec max) 0 -1)]
@@ -12,7 +11,7 @@
       (* x y))))
 
 (defn palindromes [coll]
-  (filter palindrome? coll))
+  (filter decimal-palindrome? coll))
 
 (defn solve [n]
   (reduce max (palindromes (products n))))

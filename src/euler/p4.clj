@@ -1,10 +1,5 @@
 (ns euler.p4 (:use [euler common]))
 
-(defn decimal-palindrome? [n]
-  (if (< n 10)
-    false
-    (palindrome? (Integer/toString n))))
-
 (defn products [max]
   (let [nums (range (dec max) 0 -1)]
     (for [x nums y nums]

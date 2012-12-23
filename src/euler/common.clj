@@ -31,7 +31,5 @@
 (defn palindrome? [s] (= s (clojure.string/reverse s)))
 
 (defn decimal-palindrome? [n]
-  (if (< n 11)
-    false
-    (palindrome? (Integer/toString n))))
+  (palindrome? (Integer/toString n)))
 

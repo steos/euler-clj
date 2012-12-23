@@ -1,7 +1,7 @@
 (ns euler.main
   (:gen-class)
   (:use euler.common)
-  (:require [euler p1 p2 p4 p5 p6 p8 p16 p20 p36]))
+  (:require [euler p1 p2 p4 p5 p6 p8 p9 p16 p20 p36]))
 
 (def +format+ "  %12s -> %-28s")
 
